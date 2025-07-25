@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: backend-panaderia
+    env: java
+    plan: free
+    buildCommand: "./mvnw clean package -DskipTests"
+    startCommand: "./mvnw spring-boot:run"
+    envVars:
+      - key: JAVA_VERSION
+        value: 17
